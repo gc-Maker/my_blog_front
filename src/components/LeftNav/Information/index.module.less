@@ -1,0 +1,48 @@
+.informationContainer {
+    display: flex;
+    margin: 100px auto 20px auto;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 250px;
+    box-shadow: 0 0 10px 5px black;
+    border-radius: 10px;
+    .avatar {
+        width: 80px;
+        height: 80px;
+        background: url("../../../images/avatar.jpg");
+        border-radius: 50%;
+        margin-top: 50px;
+        background-size: cover;
+    }
+    .nickName {
+        margin-top: 10px;
+        transition: 1s;
+    }
+    .nickName:hover {
+        color: #ccc;
+        cursor: pointer;
+    }
+    .email {
+        margin-top: 10px;
+    }
+    .websiteDetial {
+        margin-top: 10px;
+        height: 30px;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        .subDetial {
+            flex-grow: 1;
+            text-align: center;
+            line-height: 30px;
+        }
+        .subDetial:hover {
+            cursor: pointer;
+        }
+        .detialCenter {
+            border-left: solid black 1px;
+            border-right: solid black 1px;
+        }
+    }
+}
