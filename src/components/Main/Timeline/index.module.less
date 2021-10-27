@@ -5,8 +5,9 @@
     align-items: center;
     .TlItem {
         width: 400px;
-        height: 140px;
+        min-height: 100px;
         position: relative;
+        padding-bottom: 40px;
         .TlIcon {
             position: absolute;
             left: -12px;
@@ -22,18 +23,18 @@
         }
         .TlContent {
             padding: 10px 20px;
-            height: 70%;
+            min-height: 70%;
             width: 100%;
             background: rgba(0, 0, 0, 0.2);
             box-shadow: 0 0 10px 5px black;
-            position: absolute;
-            top: 10px;
-            left: 20px;
+            position: relative;
+            // top: 10px;
+            // left: 20px;
             border-radius: 5px;
             .detail {
                 // background: black;
-                height: 80%;
-                overflow: hidden;
+                // height: 80%;
+                // overflow: hidden;
 
             }
             .time {

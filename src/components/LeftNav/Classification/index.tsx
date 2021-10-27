@@ -1,15 +1,23 @@
 import styles from "./index.module.less";
-
+import { useEffect, useState } from "react";
+import { getLabel, Label } from "../../../utils/request";
 export default function Classification() {
-    const dataArr = ["html", "css", "javaScript", "性能优化","html", "css", "javaScript", "性能优化","html", "css", "javaScript", "性能优化"]
+    const [labelArr, setLabelArr] = useState<Label>([]);
+    useEffect(()=> {
+        getLabel().then((v)=> {
+            setLabelArr(v);
+        }, (r)=> {
+            // 错误处理
+        });
+    },[])
     return (
         <div className={styles.labelContainer}>
             {
-                dataArr.map(item => {
-                    return <div className={styles.label}>
-                        {item}
+                labelArr.map(item =>
+                    <div className={styles.label}>
+                        {item.labelName + ' ' + item.number}
                     </div>
-                })
+                )
             }
         </div>
     )
