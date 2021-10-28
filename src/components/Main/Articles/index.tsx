@@ -9,7 +9,7 @@ export default function Articles() {
                         <div className={styles.coverImg}></div>
                         <div className={styles.title}>这是一个文章的标题</div>
                         <div className={styles.time}>2021-10-25</div>
-                        <div className={styles.label}>这是标签所在行</div>
+                        {/* <div className={styles.label}>这是标签所在行</div> */}
                     </div>
                 })
             }

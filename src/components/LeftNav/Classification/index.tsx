@@ -1,6 +1,7 @@
 import styles from "./index.module.less";
 import { useEffect, useState } from "react";
 import { getLabel, Label } from "../../../utils/request";
+import {Link} from "react-router-dom";
 export default function Classification() {
     const [labelArr, setLabelArr] = useState<Label>([]);
     useEffect(()=> {
@@ -14,9 +15,9 @@ export default function Classification() {
         <div className={styles.labelContainer}>
             {
                 labelArr.map(item =>
-                    <div className={styles.label}>
-                        {item.labelName + ' ' + item.number}
-                    </div>
+                    <Link to="/articles" style={{ textDecoration:'none', color: "white"}} className={styles.label}>
+                            {item.labelName + ' ' + item.number}
+                    </Link>
                 )
             }
         </div>
