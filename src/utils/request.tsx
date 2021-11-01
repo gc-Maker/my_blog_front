@@ -26,3 +26,20 @@ export const createTimelineData = (props: TimelineData) => ajax(url + "/admin/cr
 
 // 获取Timeline内容
 export const getTimelineData = ():Promise<TimelineData[]> => ajax(url+"/home/getTimelineData");
+
+
+export interface ArticleDesc{
+    title: string;
+    ctime: string;
+}
+// 获取article内容
+export const getArticleDesc = ():Promise<ArticleDesc[]> => ajax(url+"/article/getArticleDesc");
+
+// 提交文章内容
+interface ArticleData {
+    ctime: string;
+    etime: string;
+    content: string;
+    title: string;
+}
+export const submitArticle = (props: ArticleData) => ajax(url+"/article/submitArticle", props, 'POST');

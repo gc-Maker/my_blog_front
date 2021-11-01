@@ -1,0 +1,49 @@
+.container {
+    // height: 600px;
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: bold;
+    }
+    ul {
+        display: block;
+        // list-style-type: disc;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
+        li {
+            list-style-type: disc;
+        }
+    }
+
+
+    width: 100%;
+    display: flex;
+    position: relative;
+    .inputItem {
+        flex: 1;
+    }
+    .input {
+        height: 600px;
+        background: rgba(255,0,0,0.1);
+    }
+    .outputItem {
+        flex: 1;
+    }
+    .output {
+        height: 600px;
+        background: rgba(0,0,0,0.6);
+        padding: 20px 20px;
+        color: white;
+    }
+    .title {
+        position: absolute;
+        bottom: -100px;
+        left: 200px;
+    }
+    .button {
+        position: absolute;
+        bottom: -100px;
+        left: 0;
+    }
+}
