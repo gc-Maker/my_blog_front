@@ -12,7 +12,7 @@ export const getLikeAndArticle = () : Promise<Information>=> ajax(url + "/home/g
 export const setLike = (props: any) : Promise<Information>=> ajax(url + "/home/setLike", props, 'POST');
 
 
-export type Label = Array<{labelName: string, number: number}>;
+export type Label = Array<{labelName: string, number: number, id: number}>;
 // 获取classcification版块内容
 export const getLabel = ():Promise<Label> => ajax(url + "/home/getLabel");
 
@@ -33,7 +33,7 @@ export interface ArticleDesc{
     ctime: string;
 }
 // 获取article内容
-export const getArticleDesc = ():Promise<ArticleDesc[]> => ajax(url+"/article/getArticleDesc");
+export const getArticleDesc = (labelId?: string):Promise<ArticleDesc[]> => ajax(url+"/article/getArticleDesc", {labelId});
 
 // 提交文章内容
 interface ArticleData {
